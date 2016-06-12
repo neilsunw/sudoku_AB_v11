@@ -1,5 +1,6 @@
 # sudoku_AB_v11
 Sudoku-NBP Arduboy game
+http://community.arduboy.com/t/sudoku-nbp-arduboy-game/1713
 
 Play Sudoku on your Arduboy. Includes 45 puzzles (easy, medium, hard) and allows custom puzzles to be entered manually or via serial input. Four players or puzzles can be save and restored from non-volatile memory (EEPROM).
 
