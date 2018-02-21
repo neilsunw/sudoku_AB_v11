@@ -24,7 +24,7 @@
  */
 
 #include <EEPROM.h>
-#include "Arduboy.h"
+#include "Arduboy2.h"
 #include "bitmaps.h"
 #include "puzzles.h"
 
@@ -128,7 +128,7 @@ unsigned long frameCount   = 0;
 unsigned long tpuzzle      = 0;
 
 // make an instance of arduboy used for many functions
-Arduboy arduboy;
+Arduboy2 arduboy;
 
 
 // helper functions for Arduboy buttons
@@ -323,7 +323,10 @@ void setup() {
   byte i;
   
   // initiate arduboy instance
-  arduboy.beginNoLogo();        // beginNoLogo() saves 350 bytes of program space
+  arduboy.boot();
+  arduboy.blank();
+  arduboy.flashlight();
+  arduboy.audio.begin();
 
   // here we set the framerate to 15, we do not need to run at
   // default 60 and it saves us battery life
